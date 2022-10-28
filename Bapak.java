@@ -1,0 +1,36 @@
+public class Bapak {
+    int a;
+    int b;
+    void show_variabel(){
+        System.out.println("Nilai a" + a);
+        System.out.println("Nilai b" + b);
+    }
+}
+
+class Anak extends Bapak{
+    int c;
+    void show_variabel(){
+        System.out.println("Nilai a" + a);
+        System.out.println("Nilai b" + b);
+        System.out.println("Nilai c" + c);
+    }
+}
+
+   class InheritExample{
+    public InheritExample() {
+        }
+
+    public static void main(String args[]){
+        Bapak objectBapak = new Bapak();
+        Anak objectAnak = new Anak();
+        
+        objectBapak.a=1;
+        objectBapak.b=1;
+        System.out.println("Object Bapak (Superclass):");
+        objectBapak.show_variabel();
+        
+        objectAnak.c=5;
+        System.out.println("Object Anak (Superclass dari Bapak):");
+        objectAnak.show_variabel();
+    }
+}
